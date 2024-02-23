@@ -6,8 +6,8 @@ import cv2
 import torch
 import torchvision
 
-from models.pfld import PFLDInference, AuxiliaryNet
-from mtcnn.detector import detect_faces
+from pfld import PFLDInference, AuxiliaryNet
+from detector import detect_faces
 
 from shapely.geometry import Polygon
 
@@ -190,7 +190,7 @@ def translate_eyebrow2(right_point, left_point, all_points):
 def parse_args():
 	parser = argparse.ArgumentParser(description='Testing')
 	parser.add_argument('--model_path',
-						default="./checkpoint/snapshot/checkpoint.pth.tar",
+						default="checkpoint.pth.tar",
 						type=str)
 	args = parser.parse_args()
 	return args
