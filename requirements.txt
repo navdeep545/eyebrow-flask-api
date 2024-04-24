@@ -6,5 +6,5 @@ Gunicorn==22.0.0
 opencv-contrib-python
 numpy
 shapely
-pytorch
+torch
 torchvision
